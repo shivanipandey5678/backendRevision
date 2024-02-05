@@ -1,0 +1,29 @@
+What is _. in Lodash?
+_ (Underscore) Symbol: In Lodash, the _ (underscore) is used as a convention to reference the Lodash library. It is the primary object provided by Lodash that contains all of its methods.
+Method Calls: You use _.methodName to call a Lodash function. For example, _.map() is a Lodash method used to transform elements in an array.
+
+
+-No, if Lodash were to vanish, the native JavaScript methods like map, filter, and reduce would still be available.
+
+
+-Native JavaScript Methods:
+
+Usage: Directly available in JavaScript without the need for any external libraries. These methods (map, filter, reduce, etc.) are part of the ECMAScript standard.
+
+
+-Lodash Methods Explained:
+_.map(array, iteratee):
+
+Purpose: Creates a new array by applying a function (iteratee) to each element in the given array.
+Example: Doubling numbers in an array.
+ex:
+const numbers = [1, 2, 3];
+const doubled = _.map(numbers, num => num * 2); // [2, 4, 6]
+
+-Why Use Lodash?
+Enhanced Functionality: Lodash methods often provide more options and consistency than native methods.
+Utility Functions: Includes a wide range of functions for tasks like deep cloning, merging objects, and more.
+Legacy Code: If your project already uses Lodash, it might be easier to continue using its methods.
+Summary:
+_ (Underscore): The Lodash object that provides access to all its methods.
+Lodash Methods: Prefixed with _. and offer extended functionality compared to native JavaScript methods.
