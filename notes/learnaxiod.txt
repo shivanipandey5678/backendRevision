@@ -1,0 +1,45 @@
+**Axios Overview**
+
+**What is Axios?**
+Axios is a popular JavaScript library used for making HTTP requests. It helps you send and receive data from a server, which is essential for interacting with APIs (Application Programming Interfaces).
+
+**Purpose**
+
+- **Promise-Based:** Axios uses JavaScript Promises, which allow you to handle asynchronous operations smoothly. Promises help you work with operations that take time to complete, such as fetching data from a server.
+
+- **HTTP Client:** Axios simplifies making HTTP requests, such as GET (retrieve data) and POST (send data), and handling the responses from these requests.
+
+**Installation**
+
+To use Axios in your project, you need to install it via npm (Node Package Manager):
+
+```bash
+npm install axios
+
+
+//get requests
+axios.get("https://api.example.com/data")
+.then((res=>{
+    console.log(res.data)
+})
+.catch(err=>{
+    console.log(err)
+})
+
+//POST Request: Send data to create a new resource.
+axios.post('https://api.example.com/data',{
+    name: 'John Doe',
+    age: 30
+})
+.then(res=>{
+    console.log(response.data);
+})
+ .catch(error => {
+    console.error(error);
+  });
+
+
+
+//PUT Request: Update an existing resource.
+//DELETE Request: Remove a resource.
+
