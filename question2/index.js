@@ -9,6 +9,6 @@ console.log(NIL);  // Output: '00000000-0000-0000-0000-000000000000'
 const {parse}=require('uuid');
 const uuidString = 'f47ac10b-58cc-4372-a567-0e02b2c3d479';
 let byteArray=parse(uuidString);
-console.log(byteArrays)
+console.log(byteArray)
 
 

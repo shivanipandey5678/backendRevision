@@ -1,6 +1,7 @@
 
 let fs=require("fs");
 let args = process.argv;
+console.log(args)
 let operation=args[2];
 let file1=args[3];
 let file2=args[4];
