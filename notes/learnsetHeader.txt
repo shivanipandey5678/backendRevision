@@ -1,0 +1,54 @@
+Common Content-Type Headers
+Text Types:
+
+text/plain: Plain text.
+text/html: HTML document.
+text/css: CSS stylesheet.
+text/javascript or application/javascript: JavaScript file.
+Application Types:
+
+application/json: JSON data.
+application/xml: XML data.
+application/x-www-form-urlencoded: Form data encoded in key-value pairs.
+application/octet-stream: Binary data (used for file downloads).
+Image Types:
+
+image/png: PNG images.
+image/jpeg: JPEG images.
+image/gif: GIF images.
+Audio and Video Types:
+
+audio/mpeg: MP3 audio.
+video/mp4: MP4 video.
+Multipart Types:
+
+multipart/form-data: Used for file uploads in forms.
+
+
+Difference between res.setHeader() and res.writeHead():
+
+1. res.setHeader():
+   - Adds one header at a time.
+   - Think of it as writing different parts of a letter separately:
+     - First, you write the address.
+     - Then, the date.
+     - Then, the sender's info.
+
+   Example:
+   res.setHeader("Content-Type", "text/plain"); // Sets content type
+   res.setHeader("X-Powered-By", "Node.js");    // Adds another header
+
+2. res.writeHead():
+   - Adds all headers together in one go.
+   - It's like writing the entire letter in one step:
+     - Address, date, and sender's info written all at once.
+
+   Example:
+   res.writeHead(200, { 
+     "Content-Type": "text/plain", 
+     "X-Powered-By": "Node.js"
+   });
+
+Summary:
+- res.setHeader(): Like filling out a form one field at a time.
+- res.writeHead(): Like filling out the entire form in one go.

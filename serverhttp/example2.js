@@ -1,0 +1,11 @@
+const http = require("http");
+
+const server=http.createServer((req,res)=>{
+    if(req.method==="GET"){
+        res.statusCode=200;
+        res.setHeader('Content-Type','text/plain');
+        res.end('GET request')
+    }else if(req.mathod==='POST'){
+        
+    }
+})
