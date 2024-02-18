@@ -2,7 +2,7 @@ let args=process.argv;
 let operation=args[2];
 const os=require("os");
 const crypto=require("crypto");
-const uuid=require("uuid");
+// const uuid=require("uuid");
 
 
 function OS(){
@@ -15,12 +15,16 @@ function OS(){
 }
 
 function Crypto(){
+
    const  vi = crypto.randomBytes(16);
    const  key = crypto.randomBytes(32);
+   console.log(key)
+   console.log(vi)
    const  algo="aes-256-cbc";
    const cipher=crypto.createCipheriv(algo,key,vi);
    
    let encrypted=cipher.update("Good morning","utf8",'hex');
+   console.log(encrypted)
    encrypted+= cipher.final('hex');
 
    console.log('Encrypted:', encrypted);
@@ -32,6 +36,8 @@ function UUID(){
     let newuuid=uuid()
     console.log(newuuid);
 }
+
+Crypto()
 
 
 
