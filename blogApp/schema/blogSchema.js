@@ -15,9 +15,12 @@ const blogSchema=new mongoose.Schema({
         required: true
 
     }
+   
 
 
-});
+},
+{timestamps:true,versionKey:false}
+);
 
 const Blog=mongoose.model("blog",blogSchema);
 module.exports=Blog;

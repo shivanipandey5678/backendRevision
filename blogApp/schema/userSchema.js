@@ -1,9 +1,10 @@
 const mongoose=require("mongoose");
-
+const ROLES=require("../constants/roles")
 const userSchema=new mongoose.Schema({
-    userName:{
+    username:{
         type:String,
-        required: true
+        required: true,
+        unique:true,
     },
     password:{
         type:String,
@@ -11,13 +12,16 @@ const userSchema=new mongoose.Schema({
     },
     role:{
         type:String,
-        enum:['author','admin','reader'],
-        required: true
+        enum:[ROLES.ADMIN,ROLES.AUTHOR,ROLES.READER],
+        required: true,
+        default:ROLES.READER,
 
     }
 
 
-});
+},
+{versionKey:false}
+);
 
 const User=mongoose.model("user",userSchema);
 module.exports=User;
