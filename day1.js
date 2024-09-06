@@ -1,7 +1,7 @@
-const sum=require("./sum");
+const {sum,mult}=require("./sum");
 let printName=require("./Print");
 
 printName("shiv")
 
 
-console.log(sum(1,2));
+console.log(mult(1,6));
