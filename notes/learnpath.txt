@@ -1,0 +1,28 @@
+What is the path Module?
+The path module helps you work with file and folder paths. It makes sure your paths are correct, no matter what operating system you’re using (like Windows or macOS).
+
+Key Functions
+path.join(...)
+
+Combines parts of a path into one complete path. It makes sure the slashes are correct.
+Example: path.join('folder', 'file.txt') → 'folder/file.txt'
+path.resolve(...)
+
+Turns a path into an absolute path (full path) based on where your program is running.
+Example: path.resolve('folder', 'file.txt') might output something like /Users/YourName/folder/file.txt.
+path.basename(path)
+
+Gets just the file name from a path.
+Example: path.basename('/folder/file.txt') → 'file.txt'
+path.dirname(path)
+
+Gets the folder part of a path.
+Example: path.dirname('/folder/file.txt') → '/folder'
+path.extname(path)
+
+Gets the file extension (like .txt or .jpg).
+Example: path.extname('file.txt') → '.txt'
+path.normalize(path)
+
+Cleans up a path by fixing any extra slashes or dots.
+Example: path.normalize('/folder//file.txt') → '/folder/file.txt'
