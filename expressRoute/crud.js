@@ -4,7 +4,7 @@ const app=express();
 
 app.use(express.json());
 app.get("/",(req,res)=>{
-    fs.readFileSync("./db.json","utf8",(err,data)=>{
+    fs.readFile("./db.json","utf8",(err,data)=>{
         if(err){
             res.status(500).json({message:"Server Error"});
             return;
@@ -31,4 +31,10 @@ app.post("/users",(req,res)=>{
         res.status(201).json(newUser);
     })
     })
+})
+
+app.put("/user/:id",(req,res)=>{
+    fs.readFile("./db.json","utf8",(err,data)=>{
+        
+    }
 })

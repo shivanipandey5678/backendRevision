@@ -8,7 +8,7 @@ const bodyParse=require("body-parser")
 //     xDownloadOptions:false
 //  }));
 
-app.use(bodyParse.json());
+app.use(bodyParse.json({}));
 
 app.post("/user",(req,res)=>{
     console.log(req.body);
@@ -16,7 +16,9 @@ app.post("/user",(req,res)=>{
 })
 
 app.get("/",(req,res)=>{
-    res.send("let see your strength");
+    console.log("happy")
+    res.send("let ");
+    
 })
 
 app.listen(8002,()=>{
